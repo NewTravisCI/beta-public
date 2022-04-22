@@ -20,7 +20,7 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      dist: xenial
+      dist: bionic
       arch: amd64
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
@@ -34,25 +34,25 @@ jobs:
         - ./hello_world
     - os: linux
       language: c
-      dist: focal
+      dist: bionic
       arch: amd64
       script:
         - clang -coverage -O0 hello_world.c -o hello_world
         - ./hello_world
     - os: linux
-      dist: xenial
+      dist: bionic
       language: python
       arch: amd64
       script:
         - python hello_world.py
-#     - os: freebsd
+#     - os: bionic
 #       language: python
 #       arch: amd64
 #       script:
 #         - python hello_world.py
     - os: linux
       language: python
-      dist: xenial
+      dist: bionic
       arch: amd64
       script:
         - python hello_world.py
@@ -64,12 +64,12 @@ jobs:
         - python hello_world.py
     - os: linux
       language: python
-      dist: focal
+      dist: bionic
       arch: amd64
       script:
         - python hello_world.py
     - os: linux
-      dist: xenial
+      dist: bionic
       language: java
       arch: amd64
       script:
@@ -77,7 +77,7 @@ jobs:
         - java HelloWorld
     - os: linux
       language: java
-      dist: xenial
+      dist: bionic
       arch: amd64
       script:
         - javac hello_world.java
@@ -97,20 +97,13 @@ jobs:
         - java HelloWorld
     - os: linux
       language: java
-      dist: focal
+      dist: bionic
       arch: amd64
       script:
         - javac hello_world.java
         - java HelloWorld
     - os: windows
       language: cpp
-      arch: amd64
-      script:
-        - g++ hello_world.cpp -o hello_world
-        - ./hello_world
-    - os: linux
-      language: cpp
-      dist: xenial
       arch: amd64
       script:
         - g++ hello_world.cpp -o hello_world
@@ -124,7 +117,14 @@ jobs:
         - ./hello_world
     - os: linux
       language: cpp
-      dist: focal
+      dist: bionic
+      arch: amd64
+      script:
+        - g++ hello_world.cpp -o hello_world
+        - ./hello_world
+    - os: linux
+      language: cpp
+      dist: bionic
       arch: amd64
       script:
         - g++ hello_world.cpp -o hello_world
